@@ -39,9 +39,10 @@ public class TalkieTelegramCommands {
 	}
 
 	private static void auth(Update update, TalkieTelegramBot bot) {
-		TelegramUtils.SendFastMessage(update, bot, "Talkie uses the OpenAI API to process the message.\n"
-				+ "Basically, the OpenAI API is the heart of Talkie. Currently, Talkie does not have an OpenAI account management system, so you need to connect directly with the API token.\n"
-				+ "Don't worry - your token is not saved, and is only used to connect to the API.");
+		TelegramUtils.SendFastMessage(update, bot, "Talkie uses the OpenAI API to process the message. :satellite_antenna:\n\n"
+				+ "Basically, the OpenAI API is the heart of Talkie. :heart:\n"
+				+ "Currently, Talkie does not have an OpenAI account management system :receipt:, so you need to connect directly with the API token. :key:\n\n"
+				+ "Don't worry - your token is not saved, and is only used to connect to the API. :sunglasses:");
 		if (TalkieTelegramBot.TEST) {
 			TelegramUtils.SendFastMessage(update, bot, "BOTOWNER MODE: Authenticating using Bot's OpenAI Key...");
 			bot.OpenAIKeys.put(update.getMessage().getChatId(), System.getenv("OPENAI_API_KEY"));
@@ -70,7 +71,7 @@ public class TalkieTelegramCommands {
 			var convId = TalkieClient.newConversation(bot.api, bot.currentOpenAIKey);
 			logger.info(update.getMessage().getFrom().getFirstName() + " -> " + convId);
 			bot.linkConversationIDWithChatId(bot.currentChatId, convId);
-			TelegramUtils.SendFastMessage(update, bot, "Your Conversation ID is: " + currentConversationId);
+			TelegramUtils.SendFastMessage(update, bot, "Your Conversation ID is: " + convId);
 			TelegramUtils.SendFastMessage(update, bot, "Created! Now every message you send will go to Talkie. Good luck!");
 		} catch (Exception e) {
 			TelegramUtils.SendFastMessage(update, bot, "Oops! A server-side error occoured! Try again later.");
