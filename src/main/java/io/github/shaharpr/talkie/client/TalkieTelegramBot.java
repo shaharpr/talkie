@@ -80,10 +80,12 @@ public class TalkieTelegramBot extends TelegramLongPollingBot {
 			}else {
 				if(!connected) {
 					TelegramUtils.SendFastMessage(update, this, "You are not authenticated!\nAuthenticate with /auth");
+					return;
 				}
 				
 				if(currentConversationIDs.get(update.getMessage().getChatId()) == null) {
 					TelegramUtils.SendFastMessage(update, this, "?\nStart a new conversation please.");
+					return;
 				}
 				try {
 					logger.info("Sended Message to Server: " + update.getMessage().getText());
