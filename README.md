@@ -1,4 +1,5 @@
 # Talkie - a multi-purpose interactive chatbot
+*This README file is translated from Hebrew by Google Translate*
 
 ## Introduction
 Talkie is a multi-purpose interactive chatbot based on GPT-3.5 (ChatGPT).
@@ -15,6 +16,19 @@ The current implementation of Talkie can:
 * **Calculate** equations with a calculator backend
 * Check **What time is it** with a clock backend
 
+## Installation
+You can download the distribution ZIP file of Talkie from [here](https://github.com/shaharpr/talkie/releases),
+
+*OR* you can build it yourself using:
+
+```bash
+git clone https://github.com/shaharpr/talkie.git
+cd talkie
+mvn clean package
+```
+
+Extract the ZIP file to wherever you want.
+
 ## Usage
 Talkie has three parts.
 
@@ -25,16 +39,16 @@ Talkie has three parts.
 The server relies on the OpenAI API, so you need to create an API key [here](https://platform.openai.com/account/api-keys). To run the Telegram bot, you need to talk
 to [@BotFather](https://t.me/BotFather) to create a bot.
 
-
-To run the server, run the `io.github.shaharpr.talkie.Server` class.
-This will open the server in port `8080`.
-
-Run the client (`io.github.shaharpr.talkie.Main`) or the Telegram bot (`io.github.shaharpr.talkie.TelegramBotMain`) with the environment variables:
+Set the environment variables:
 
 ```
 OPENAI_API_KEY - Your OpenAI API Key
 TALKIE_BOT_TOKEN - The token of your bot
 ```
+
+To run the server, start `talkie_server.bat`.
+
+You can run the client (`talkie_client.bat`) or the Telegram bot (`talkie_telegramBot.bat`) and start a new conversation.
 
 Enjoy! 😀
 
