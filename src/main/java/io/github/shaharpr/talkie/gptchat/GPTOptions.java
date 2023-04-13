@@ -73,6 +73,10 @@ public class GPTOptions {
 			super(model == null ? "gpt-3.5-turbo" : model, 256, 0.7, "assistant", "user");
 		}
 		
+		public DefaultTalkieOptions(String model, double temperature) {
+			super(model == null ? "gpt-3.5-turbo" : model, 256, temperature, "assistant", "user");
+		}
+		
 		/**
 		 * Create an options object with the default model
 		 */
