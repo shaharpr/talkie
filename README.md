@@ -2,7 +2,7 @@
 *This README file is translated from Hebrew by Google Translate*
 
 ## Introduction
-Talkie is a multi-purpose interactive chatbot based on GPT-3.5 (ChatGPT)!
+Talkie is a multi-purpose interactive chatbot based on GPT-3.5 (ChatGPT).
 
 Language models are unable to search the Internet, tell the time, or even do complicated calculations.
 
